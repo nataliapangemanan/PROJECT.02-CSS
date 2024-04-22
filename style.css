@@ -25,20 +25,17 @@ h1 {
 
 .content {
     background-color: #ADBC9F;
-    padding: 40px;
+    padding: 20px;
     margin: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-    align-content: inherit;
-
 }
-
 .content:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 
 h2 {
     color: #333;
@@ -54,6 +51,40 @@ a {
 a:hover {
     text-decoration: underline;
     text-decoration-color: #FBFADA;
+}
+/* Gaya untuk tombol "Lihat Selengkapnya" */
+.show-more {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #12372A;
+    color: #FBFADA;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.show-more:hover {
+    background-color: #456;
+}
+
+/* Gaya untuk bingkai pada foto di galeri */
+.gallery-content img {
+    border: 2px solid #12372A;
+    border-radius: 5px;
+    margin: 5px;
+}
+.content .expandable-content {
+    display: none;
+}
+
+.expanded {
+    display: block;
+}
+
+/* Gaya untuk animasi ketika konten diperluas */
+.expand-animation {
+    animation: expand 0.5s forwards;
 }
 
 #home {
@@ -79,7 +110,6 @@ a:hover {
         margin: 20px auto;
     }
 }
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -88,6 +118,16 @@ a:hover {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+@keyframes expand {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: auto;
+        opacity: 1;
     }
 }
 .content {
